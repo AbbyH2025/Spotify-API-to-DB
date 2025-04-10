@@ -10,6 +10,8 @@ import spotipy.util as util
 import webbrowser
 import spotipy
 from json.decoder import JSONDecodeError
+from APIKey import apiKey
+
 #the goal of this is to grab the spotify playlist with ID 3To0rDryJknvoWZaiaW34z
     #take the data from that (song name, song ID, song parent albumn, song release date) and put it into a database file
 #Secondarily, use the SteamAPI to get game information from my profile
@@ -20,7 +22,7 @@ username = input('Spotify User name: ')
 
 scope = 'playlist-read-private' 
 client_id = 'ec039216d41f4f9ea4585292828f6077'
-client_secret = 'dc72ccc081b8484b8185ce5fdc1d5f79'
+client_secret = apiKey
 redirect_uri = 'https://www.google.com/callback/'
 #erase cache and prompt for user permision
 try: 
